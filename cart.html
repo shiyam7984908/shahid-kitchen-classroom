@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- HTML-01 START: Page settings and styles -->
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#df542c" />
+    <title>Your Cart · Shahid Kitchen</title>
+    <link rel="icon" href="./assets/favicon.svg"
+      type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- HTML-01 END -->
+  </head>
+  <body data-page="cart">
+    <a class="skip-link" href="#app">Skip to content</a>
+    <header id="site-header"></header>
+    <main id="app">
+      <!-- HTML-02 START: Complete cart layout -->
+      <section class="container-xl page-section">
+        <div class="breadcrumb-line">
+          <a href="menu.html">Our menu</a>
+          <span>/</span>
+          Your cart
+        </div>
+        <div class="page-title">
+          <div class="eyebrow">ONE STEP CLOSER TO DELICIOUS</div>
+          <h1>
+            Your cart
+            <span>.</span>
+          </h1>
+          <p>A few good choices. One great meal.</p>
+        </div>
+        <div id="cart-empty" hidden=""></div>
+        <div id="cart-content">
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="panel cart-panel">
+                <div class="cart-table-head">
+                  <span id="cart-item-count">
+                    0 items in your bag
+                  </span>
+                  <span>Made fresh for you</span>
+                </div>
+                <div id="cart-rows"></div>
+              </div>
+              <a
+                href="menu.html"
+                class="text-link mt-4 d-inline-flex"
+              >
+                ← Keep exploring the menu
+              </a>
+            </div>
+            <div class="col-lg-4">
+              <aside class="panel summary-panel">
+                <h2>Order summary</h2>
+                <div class="summary-line">
+                  <span>Subtotal</span>
+                  <strong id="cart-subtotal">MVR 0</strong>
+                </div>
+                <div class="summary-line">
+                  <span>Delivery to Malé</span>
+                  <strong id="cart-delivery">MVR 0</strong>
+                </div>
+                <p class="summary-note">
+                  Choose free pickup at checkout.
+                </p>
+                <div class="summary-line total">
+                  <span>Total</span>
+                  <strong id="cart-total">MVR 0</strong>
+                </div>
+                <a class="btn btn-brand w-100" href="checkout.html">
+                  Continue to checkout
+                  <span data-icon="arrow"></span>
+                </a>
+                <div class="secure-note">
+                  <span data-icon="check"></span>
+                  Pay with cash when your order arrives
+                </div>
+              </aside>
+            </div>
+          </div>
+          <section class="mt-5">
+            <div class="section-heading">
+              <div>
+                <div class="eyebrow">A LITTLE EXTRA HAPPINESS</div>
+                <h2>Make it a full meal.</h2>
+              </div>
+            </div>
+            <div class="row g-4" id="cart-recommendations"></div>
+          </section>
+        </div>
+      </section>
+      <!-- HTML-02 END -->
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="./assets/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./assets/js/shared.js"></script>
+    <script type="module" src="js/cart.js"></script>
+  </body>
+</html>
