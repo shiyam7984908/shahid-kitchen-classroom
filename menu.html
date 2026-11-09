@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- HTML-01 START: Page settings and styles -->
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#df542c" />
+    <title>Our Menu · Shahid Kitchen</title>
+    <link rel="icon" href="./assets/favicon.svg"
+      type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- HTML-01 END -->
+  </head>
+  <body data-page="menu">
+    <a class="skip-link" href="#app">Skip to content</a>
+    <header id="site-header"></header>
+    <main id="app">
+      <!-- HTML-02 START: Menu introduction -->
+      <div class="page-banner">
+        <div class="container-xl">
+          <div class="eyebrow">FRESH FROM OUR KITCHEN</div>
+          <h1>
+            Find your happy plate
+            <span>.</span>
+          </h1>
+          <p>
+            24 delicious dishes. 16 cold takeaway drinks. Four
+            favorites in every category.
+          </p>
+        </div>
+      </div>
+      <!-- HTML-02 END -->
+      <!-- HTML-03 START: Menu controls and products -->
+      <section class="container-xl menu-section">
+        <div class="menu-toolbar">
+          <div class="type-tabs" role="group" aria-label="Menu type">
+            <button
+              data-type="food"
+              class="active"
+              aria-pressed="true"
+            >
+              Food
+              <span>24</span>
+            </button>
+            <button data-type="drink" aria-pressed="false">
+              Drinks
+              <span>16</span>
+            </button>
+          </div>
+          <label class="search-box">
+            <span data-icon="search"></span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Search your next craving…"
+              aria-label="Search menu"
+            />
+          </label>
+        </div>
+        <div class="menu-filter-row">
+          <div
+            id="categories"
+            class="filter-pills"
+            aria-label="Categories"
+          ></div>
+          <label class="sort-label">
+            Sort by
+            <select id="sort" aria-label="Sort menu">
+              <option value="recommended">Recommended</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="name">Name: A–Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="results-head">
+          <span id="result-count">Products will appear here.</span>
+          <span>
+            <span data-icon="chef"></span>
+            Freshly prepared to order
+          </span>
+        </div>
+        <div class="row g-4" id="menu-grid"></div>
+        <div class="menu-bottom-note">
+          <span data-icon="chef"></span>
+          Made fresh, made for you. Please mention any dietary
+          requirements in your order notes.
+        </div>
+      </section>
+      <!-- HTML-03 END -->
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="./assets/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./assets/js/shared.js"></script>
+    <script type="module" src="js/menu.js"></script>
+  </body>
+</html>
