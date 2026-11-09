@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- HTML-01 START: Page settings and styles -->
+    <meta charset="utf-8" />
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#df542c" />
+    <title>Kitchen Dashboard · Shahid Kitchen</title>
+    <link rel="icon" href="./assets/favicon.svg"
+      type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- HTML-01 END -->
+  </head>
+  <body data-page="admin">
+    <a class="skip-link" href="#app">Skip to content</a>
+    <header id="site-header"></header>
+    <main id="app">
+      <!-- HTML-02 START: Complete staff dashboard -->
+      <div class="container-xl page-section">
+        <div class="admin-heading">
+          <div>
+            <div class="eyebrow">
+              A GOOD DAY STARTS IN THE KITCHEN
+            </div>
+            <h1>
+              Kitchen dashboard
+              <span>.</span>
+            </h1>
+            <p>A little order behind every great meal.</p>
+          </div>
+          <span class="admin-chip">
+            <span class="live-dot"></span>
+            Browser demo
+          </span>
+        </div>
+        <div class="demo-admin-note">
+          Practice mode: orders and menu availability are shared
+          between tabs in this browser. No real customer orders are
+          sent.
+        </div>
+        <div class="row g-3 stats-grid">
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <span data-icon="bag"></span>
+              <span>Orders today</span>
+              <strong id="staff-today">0</strong>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <span data-icon="clock"></span>
+              <span>Need attention</span>
+              <strong id="staff-attention">0</strong>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <span data-icon="truck"></span>
+              <span>Out for delivery</span>
+              <strong id="staff-delivery">0</strong>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="stat-card">
+              <span data-icon="check"></span>
+              <span>Completed sales today</span>
+              <strong id="staff-sales">0</strong>
+            </div>
+          </div>
+        </div>
+        <div class="admin-controls">
+          <div class="type-tabs">
+            <button data-view="orders" class="active">
+              Orders
+              <span id="staff-order-count">0</span>
+            </button>
+            <button data-view="menu" class="">
+              Menu availability
+              <span>40</span>
+            </button>
+          </div>
+          <div class="d-flex gap-2">
+            <button
+              class="btn btn-sm btn-outline-secondary"
+              id="seed-orders"
+            >
+              Load sample orders
+            </button>
+            <button
+              class="btn btn-sm btn-light"
+              id="clear-demo"
+              hidden=""
+            >
+              Remove samples
+            </button>
+          </div>
+        </div>
+        <div class="panel admin-panel" id="staff-orders-panel">
+          <div class="admin-table-tools">
+            <div class="filter-pills">
+              <button class="filter-pill active" data-filter="all">
+                All orders
+              </button>
+              <button class="filter-pill" data-filter="pending">
+                Order placed
+              </button>
+              <button class="filter-pill" data-filter="preparing">
+                Preparing
+              </button>
+              <button class="filter-pill" data-filter="completed">
+                Completed
+              </button>
+            </div>
+            <label class="search-box compact">
+              <span data-icon="search"></span>
+              <input
+                id="admin-search"
+                type="search"
+                placeholder="Search orders…"
+                aria-label="Search orders"
+                value=""
+              />
+            </label>
+          </div>
+          <div class="table-responsive">
+            <table class="table admin-table align-middle">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Customer</th>
+                  <th>Total</th>
+                  <th>Method</th>
+                  <th>Status</th>
+                  <th>Update status</th>
+                </tr>
+              </thead>
+              <tbody id="staff-order-rows"></tbody>
+            </table>
+          </div>
+        </div>
+        <div
+          class="panel admin-panel"
+          id="staff-menu-panel"
+          hidden=""
+        >
+          <div class="admin-table-tools">
+            <h2 class="mb-0">Today’s menu</h2>
+            <span>24 food items · 16 drinks</span>
+          </div>
+          <div class="table-responsive">
+            <table class="table admin-table align-middle">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Availability</th>
+                </tr>
+              </thead>
+              <tbody id="staff-menu-rows"></tbody>
+            </table>
+          </div>
+        </div>
+        <dialog id="order-dialog">
+          <div id="dialog-content">
+            <div class="eyebrow">ORDER DETAILS</div>
+            <h2 id="staff-detail-id"></h2>
+            <div id="staff-detail-status"></div>
+            <p class="mt-3">
+              <strong id="staff-detail-name"></strong>
+              <br />
+              <span id="staff-detail-phone"></span>
+              <br />
+              <span id="staff-detail-address"></span>
+            </p>
+            <div id="staff-detail-items"></div>
+            <div class="summary-line">
+              <span>Delivery</span>
+              <strong id="staff-detail-delivery"></strong>
+            </div>
+            <div class="summary-line total">
+              <span>Total</span>
+              <strong id="staff-detail-total"></strong>
+            </div>
+            <p id="staff-detail-notes"></p>
+          </div>
+          <button class="btn btn-brand mt-3" id="close-dialog">
+            Close details
+          </button>
+        </dialog>
+        <div class="admin-bottom">
+          <span data-icon="chef"></span>
+          Your kitchen, your rhythm. Changes are saved automatically.
+        </div>
+      </div>
+      <!-- HTML-02 END -->
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="./assets/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./assets/js/shared.js"></script>
+    <script type="module" src="js/admin.js"></script>
+  </body>
+</html>
