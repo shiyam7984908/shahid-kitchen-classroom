@@ -1,8 +1,8 @@
 // Paste each numbered block only inside its matching START / END area.
 // JS-01 START: Imports and starting variables
-import { menu } from "../../assets/js/data.js";
-import { cartLines, totals, quantity } from "../../assets/js/store.js";
-import { money, photo, card, icon, empty } from "../../assets/js/shared.js";
+import { menu } from "./assets/js/data.js";
+import { cartLines, totals, quantity } from "./assets/js/store.js";
+import { money, photo, card, icon, empty } from "./assets/js/shared.js";
 // JS-01 END
 // JS-02 START: createCartRow
 function createCartRow(entry) {
